@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "281964629663",
+    "project_id": "hymns-df154",
+    "storage_bucket": "hymns-df154.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281964629663:android:01ab8cb42938c8d968dcaa",
+        "android_client_info": {
+          "package_name": "com.example.hymns"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281964629663-hluafvi57uvl2q43usdh64dchcrp4do8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1vNBz1JWj2DQ5wSmqB3gyGwB2iogrt3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281964629663-hluafvi57uvl2q43usdh64dchcrp4do8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
