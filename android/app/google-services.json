@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:281964629663:android:01ab8cb42938c8d968dcaa",
+        "mobilesdk_app_id": "1:281964629663:android:184b4349ebe7357668dcaa",
         "android_client_info": {
           "package_name": "com.example.hymns"
         }
@@ -29,6 +29,13 @@
             {
               "client_id": "281964629663-hluafvi57uvl2q43usdh64dchcrp4do8.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "281964629663-an201b7ogs0hmbsmg7t9g4q9gqa1tb4u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hymns"
+              }
             }
           ]
         }

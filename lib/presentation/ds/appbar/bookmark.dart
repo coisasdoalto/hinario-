@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hymns/ds/colors.dart';
-import 'package:hymns/home/home.dart';
+import 'package:hymns/presentation/ds/colors.dart';
+import 'package:hymns/presentation/home/home.dart';
 
 class Bookmark extends StatelessWidget {
   const Bookmark({Key? key}) : super(key: key);

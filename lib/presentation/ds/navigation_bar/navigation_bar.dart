@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hymns/ds/colors.dart';
-import 'package:hymns/ds/divider.dart';
+import 'package:hymns/presentation/ds/colors.dart';
+import 'package:hymns/presentation/ds/divider.dart';
 
 class NavBar extends StatelessWidget {
   final Function goBack;

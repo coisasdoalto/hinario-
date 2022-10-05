@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hymns/ds/colors.dart';
+import 'package:hymns/presentation/ds/colors.dart';
 
 class HymnDetails extends StatelessWidget {
   final String text;

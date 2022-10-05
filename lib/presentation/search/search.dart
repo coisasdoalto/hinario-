@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hymns/ds/appbar/appbar.dart';
-import 'package:hymns/ds/colors.dart';
+import 'package:hymns/presentation/ds/appbar/appbar.dart';
+import 'package:hymns/presentation/ds/colors.dart';
+
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hymns/ds/appbar/appbar.dart';
-import 'package:hymns/ds/colors.dart';
-import 'package:hymns/ds/divider.dart';
-import 'package:hymns/ds/hymn_bar/hymn_bar.dart';
-import 'package:hymns/ds/hymn_details/hymn_details.dart';
-import 'package:hymns/ds/navigation_bar/navigation_bar.dart';
-import 'package:hymns/ds/order_bar/order_bar.dart';
-import 'package:hymns/ds/return_bar/return_bar.dart';
+import 'package:hymns/presentation/ds/appbar/appbar.dart';
+import 'package:hymns/presentation/ds/colors.dart';
+import 'package:hymns/presentation/ds/divider.dart';
+import 'package:hymns/presentation/ds/hymn_bar/hymn_bar.dart';
+import 'package:hymns/presentation/ds/hymn_details/hymn_details.dart';
+import 'package:hymns/presentation/ds/navigation_bar/navigation_bar.dart';
+import 'package:hymns/presentation/ds/return_bar/return_bar.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

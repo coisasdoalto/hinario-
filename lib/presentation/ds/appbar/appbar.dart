@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hymns/ds/appbar/bookmark.dart';
-import 'package:hymns/ds/colors.dart';
-import 'package:hymns/ds/appbar/logo.dart';
-import 'package:hymns/ds/appbar/search_icon.dart';
+import 'package:hymns/presentation/ds/appbar/bookmark.dart';
+import 'package:hymns/presentation/ds/appbar/logo.dart';
+import 'package:hymns/presentation/ds/appbar/search_icon.dart';
+import 'package:hymns/presentation/ds/colors.dart';
 
 class AppBarWidget extends StatelessWidget with PreferredSizeWidget  {
   const AppBarWidget({Key? key}) : super(key: key);

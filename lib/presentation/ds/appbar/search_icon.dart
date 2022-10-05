@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hymns/ds/colors.dart';
-import 'package:hymns/search/search.dart';
+import 'package:hymns/presentation/ds/colors.dart';
+import 'package:hymns/presentation/search/search.dart';
 
 class SearchIcon extends StatelessWidget {
   const SearchIcon({Key? key}) : super(key: key);
