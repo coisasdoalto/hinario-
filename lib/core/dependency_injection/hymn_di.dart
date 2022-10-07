@@ -7,8 +7,9 @@ import 'package:hymns/feature/hymns_and_songs/domain/usecase/hymn_usecase.dart';
 
 class HymnInjector {
   call() {
-    GetIt.I.registerFactory<HymnDataSource>(
-        () => HymnDataSource(GetIt.I<FirestoreFacade>()));
+    GetIt.I.registerFactory<HymnDataSource>(() => HymnDataSource(
+          GetIt.I<FirestoreFacade>(),
+        ));
 
     GetIt.I.registerFactory<HymnRepository>(
         () => HymnRepositoryImpl(GetIt.I<HymnDataSource>()));

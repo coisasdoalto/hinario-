@@ -17,10 +17,10 @@ class StorageFacade {
         final url = await ref.getDownloadURL();
         return url;
       } else {
-        throw StorageFacadeException('Fail upload file');
+        throw StorageFacadeException('Failed to upload file');
       }
     } catch (e) {
-      throw StorageFacadeException('Fail upload file');
+      throw StorageFacadeException('Failed to upload file');
     }
   }
 }
