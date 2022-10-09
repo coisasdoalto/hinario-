@@ -3,7 +3,7 @@ import 'package:hymns/feature/hymns_and_songs/domain/entities/hymn.dart';
 import 'package:hymns/feature/hymns_and_songs/domain/repository/hymn_repository.dart';
 
 abstract class HymnUseCase {
-  Future<Hymn> call();
+  Future<List<Hymn>> call();
 }
 
 class HymnUseCaseImpl implements HymnUseCase {
@@ -11,7 +11,7 @@ class HymnUseCaseImpl implements HymnUseCase {
 
   HymnUseCaseImpl(this.repository);
   @override
-  Future<Hymn> call() async {
+  Future<List<Hymn>> call() async {
     return await repository.call();
   }
 }

@@ -1,40 +1,59 @@
 import 'package:hymns/core/util/model.dart';
+import 'package:hymns/feature/hymns_and_songs/data/model/stanza_model.dart';
 import 'package:hymns/feature/hymns_and_songs/domain/entities/hymn.dart';
+import 'package:hymns/feature/hymns_and_songs/domain/entities/stanza.dart';
 
 class HymnModel extends Hymn implements Model {
-  HymnModel(String title, int number, List<String> verses)
-      : super(title, number, verses);
+  HymnModel(
+    String chorus,
+    dynamic number,
+    dynamic originalNumber,
+    String originalTitle,
+    List<Stanza> stanzas,
+    String title,
+  ) : super(
+          chorus,
+          number,
+          originalNumber,
+          originalTitle,
+          stanzas,
+          title,
+        );
 
   @override
   Map<String, dynamic> toMap() {
     return {
-      'title': title,
+      'chorus': chorus,
       'number': number,
-      'verses': verses,
+      'originalNumber': originalNumber,
+      'originalTitle': originalTitle,
+      'stanzas':
+          stanzas.map((choice) => StanzaModel.copy(choice).toMap()).toList(),
+      'title': title,
     };
   }
 
   @override
   factory HymnModel.fromJson(Map json) {
-    List<String> verses = [];
-
-    if (json['verses'] != null) {
-      for (var element in (json['verses'] as List)) {
-        verses.add(element);
-      }
-    }
-
     return HymnModel(
-      json['title'] ?? '',
+      json['chorus'] ?? "",
       json['number'] ?? 0,
-      verses,
+      json['originalNumber'] ?? 0,
+      json['originalTitle'] ?? '',
+      ((json['stanzas'] ?? []) as List)
+          .map((answer) => StanzaModel.fromJson(answer))
+          .toList(),
+      json['title'] ?? "",
     );
   }
   factory HymnModel.copy(Hymn hymn) {
     return HymnModel(
-      hymn.title,
+      hymn.chorus,
       hymn.number,
-      hymn.verses,
+      hymn.originalNumber,
+      hymn.originalTitle,
+      hymn.stanzas,
+      hymn.title,
     );
   }
 }

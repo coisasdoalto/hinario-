@@ -9,9 +9,9 @@ class HomeBloc {
     this.useCase
   );
 
-  final StreamController<Hymn> _hymnController = StreamController();
-  Stream<Hymn> get hymnStream => _hymnController.stream;
-  Function(Hymn) get _addHymn => _hymnController.sink.add;
+  final StreamController<List<Hymn>> _hymnController = StreamController();
+  Stream<List<Hymn>> get hymnStream => _hymnController.stream;
+  Function(List<Hymn>) get _addHymn => _hymnController.sink.add;
 
   loanHymn() async {
     var hymn = await useCase();

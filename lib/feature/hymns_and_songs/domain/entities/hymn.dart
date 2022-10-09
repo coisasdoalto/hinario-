@@ -1,11 +1,13 @@
-class Hymn {
-  final String title;
-  final int number;
-  final List<String> verses;
+import 'package:hymns/feature/hymns_and_songs/domain/entities/stanza.dart';
 
-  Hymn(
-    this.title,
-    this.number,
-    this.verses,
-  );
+class Hymn {
+  final String chorus;
+  final dynamic number;
+  final dynamic originalNumber;
+  final String originalTitle;
+  final List<Stanza> stanzas;
+  final String title;
+
+  Hymn(this.chorus, this.number, this.originalNumber, this.originalTitle,
+      this.stanzas, this.title);
 }

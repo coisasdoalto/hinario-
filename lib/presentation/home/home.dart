@@ -5,9 +5,8 @@ import 'package:hymns/presentation/ds/appbar/appbar.dart';
 import 'package:hymns/presentation/ds/colors.dart';
 import 'package:hymns/presentation/ds/divider.dart';
 import 'package:hymns/presentation/ds/hymn_bar/hymn_bar.dart';
-import 'package:hymns/presentation/ds/hymn_details/hymn_details.dart';
 import 'package:hymns/presentation/ds/navigation_bar/navigation_bar.dart';
-import 'package:hymns/presentation/ds/return_bar/return_bar.dart';
+import 'package:hymns/presentation/ds/order_bar/order_bar.dart';
 import 'package:hymns/presentation/home/home_bloc.dart';
 
 class Home extends StatefulWidget {
@@ -29,10 +28,10 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<Hymn>(
+    return StreamBuilder<List<Hymn>>(
         stream: bloc.hymnStream,
         builder: (context, snapshot) {
-          var hymn = snapshot.data ?? Hymn('', 0, ['']);
+          var hymn = snapshot.data ?? [];
           return Scaffold(
             appBar: const AppBarWidget(),
             bottomSheet: const NavBar(
@@ -52,21 +51,21 @@ class _HomeState extends State<Home> {
                   itemBuilder: (context, index) {
                     return Column(
                       children: [
-                        const ReturnBar(),
-                        const HDivider(),
-                        HymnBar(
-                            index: hymn.number,
-                            title: hymn.title,
-                            onPressed: hello),
+                        const OrderBar(alphabetical: hello, numerical: hello),
                         const HDivider(),
                         SizedBox(
-                          height: 400,
+                         height: 550,
                           child: ListView.builder(
-                            itemCount: hymn.verses.length,
+                            itemCount: hymn.length,
                             itemBuilder: (BuildContext context, int index) {
-                              final verse = hymn.verses[index];
-                              return HymnDetails(
-                                text: verse,
+                              return Column(
+                                children: [
+                                  HymnBar(
+                                      index: hymn[index].number,
+                                      title: hymn[index].title,
+                                      onPressed: hello),
+                                  const HDivider(),
+                                ],
                               );
                             },
                           ),

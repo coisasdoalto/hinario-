@@ -9,7 +9,7 @@ class HymnRepositoryImpl implements HymnRepository {
 
   HymnRepositoryImpl(this.dataSource);
   @override
-  Future<Hymn> call() async {
+  Future<List<Hymn>> call() async {
     return await dataSource(fromJson: (json) => HymnModel.fromJson(json));
   }
 }
